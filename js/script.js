@@ -1,6 +1,10 @@
 let selectBar = document.getElementById('selectBar');
 let searchButton = document.getElementById('searchButton');
 let tbody = document.getElementById('report');
+let historyData = {
+  negara:"",
+  time:""
+}
 
 searchButton.addEventListener('click',function(){
   let negara = selectBar.value;
@@ -16,6 +20,17 @@ searchButton.addEventListener('click',function(){
     }
   }
   alert(txt);
+
+  //insert into session storage
+  let today = new Date();
+  let time = today.getHours()+" : "+today.getMinutes()+" : "+today.getSeconds();
+  historyData.negara=negara;
+  historyData.time=time;
+  
+  putHistory(historyData);
+
+  renderHistory();
+
 })
 
 // get API <-- copas dari internet bagian get API saja
@@ -60,10 +75,3 @@ request.onload = function() {
 }
 
 request.send();
-
-
-        // console.log('Country :'+element.Country);
-        // console.log('Total Confirmed :'+element.TotalConfirmed);
-        // console.log('Total Death :'+element.TotalDeaths);
-        // console.log('Total Recovered :'+element.TotalRecovered);
-        // console.log('Last Update :'+element.Date);

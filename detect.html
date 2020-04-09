@@ -31,7 +31,7 @@
                         <option selected disabled>Silahkan memilih negara</option>
                     </select>
                 </form>
-                <button id="searchButton">search</button>
+                <button id="searchButton">search</button> <a href="#historyTable" style="text-decoration: none;color:beige">lihat jejak rekaman</a>
                 </center>
                 <div id="divReport">
                     <table>
@@ -55,6 +55,23 @@
             <article>
                 <h2>Rekam jejak perekaman</h2>
                 
+                <center>
+                
+                    <div id="historyTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Negara</th>
+                                    <th>Waktu</th>
+                                </tr>
+                            </thead>
+                            <tbody id="historyBody">
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                </center>
                 
             </article>
         </div>
@@ -95,5 +112,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/storage.js"></script>
 </body>
 </html>

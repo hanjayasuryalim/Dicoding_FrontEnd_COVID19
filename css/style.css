@@ -119,6 +119,16 @@ nav ul li a:hover{
 
 /* END OF FORM DETECT */
 
+/*FORM OF HISTORY*/
+#historyTable{
+    overflow: scroll;
+    height:300px;
+}
+#historyTable table thead th{
+    background-color:rgb(219, 181, 92);
+
+}
+/*END OF FORM HISTORY*/
 article,aside{
     border:1px solid black;
     border-radius:7px;
