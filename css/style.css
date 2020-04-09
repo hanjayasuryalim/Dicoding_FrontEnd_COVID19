@@ -2,11 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 *{
     box-sizing: border-box;
     padding:0;
-    margin:0;
+    margin:0; 
+}
+
+@keyframes animateBackground{
+    from {background-image: linear-gradient(to bottom right,rgb(41, 217, 211),rgb(3, 34, 33));}
+    to {background-image: linear-gradient(to bottom right,rgb(3, 34, 33),rgb(41, 217, 211));}
+}
+
+body{
+    background-image: linear-gradient(to bottom right,rgb(41, 217, 211),rgb(3, 34, 33));
+    animation-name:animateBackground;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
 }
 
 /*HEADER*/
@@ -19,18 +34,36 @@ nav{
     text-align:center;
 }
 
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 nav ul{
     list-style-type: none;
+    border:5px solid black;
+    margin:0 auto;
+    width:fit-content;
+    background-color:rgb(219, 185, 92);
 }
 
 nav ul li{
     display:inline;
     padding:5px;
+  
 }
 
 nav ul li a{
     text-decoration:none;
+    font-family: 'Montserrat', sans-serif;
     color:black;
+    font-weight: bolder;
+    margin:5px;
+}
+
+nav ul li a:hover{
+    color:rgb(250, 107, 25);
+
 }
 
 /*MAIN*/
@@ -77,11 +110,12 @@ aside img{
 .aisatsu{
     padding:25px;
     margin:10px;
-    line-height: 45px;
-    text-align:justify;
+    line-height: 35px;
+    text-align:center;
     background-image: linear-gradient(rgb(208, 237, 245), rgb(129, 186, 201));
     opacity: 0.7;
     transition:opacity 0.7s ease-in-out;
+    font-size:125%;
     font-family: 'Comic Neue', cursive;
 }
 
@@ -167,6 +201,9 @@ aside{
 footer{
     display:flex;
     flex-direction: column;
+    margin:1%;
+    font-weight: bolder;
+    
 }
 
 .footer-column{
@@ -183,6 +220,15 @@ footer{
 
 .footer-border{
     border-left:1px solid black;
+}
+
+.footer-item img{
+    width:50px;
+    transition:opacity 0.6s ease;
+}
+
+.footer-item img:hover{
+    opacity:0.6;
 }
 
 @media screen and (max-width:1000px){
