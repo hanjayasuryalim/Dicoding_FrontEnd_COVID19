@@ -84,6 +84,40 @@ nav ul li a:hover{
     background-color: black;
 }
 
+/* FROM DETECT */
+#content select{
+    height:20px;
+}
+
+#content button{
+    background-color: #888888;
+    border-radius: 5px;
+    width:120px;
+    padding:10px;
+    margin:5px;
+}
+#divReport{
+    padding:10px;
+    overflow:scroll;
+    height:500px;
+}
+
+#divReport table,tr,td,th{
+    border:1px solid black;
+    padding:15px;
+    border-collapse: collapse;
+}
+
+#divReport th,td{
+    text-align:center;
+}
+
+#divReport table tbody tr:hover{
+    cursor:pointer;
+    background-color:lightblue;
+}
+
+/* END OF FORM DETECT */
 
 article,aside{
     border:1px solid black;
